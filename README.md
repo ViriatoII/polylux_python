@@ -1,12 +1,10 @@
 # Polylux_python                
 
+*A Napari app to visualize microscopy images with spatial coordinates of transcripts and cell boundries (roifiles)*
 
-Porting Polylux into python, Resolve Biosciences
+**Resolve Biosciences**
+_________________
     
-
-
-
-
 
 ### INSTALLATION:
  You need Python installed. Run the following in your command prompt:    
