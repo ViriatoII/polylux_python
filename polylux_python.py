@@ -43,17 +43,16 @@ import numpy as np
 
 ######### INPUTS AREA ################################
 
-# Files to read
-JPEG_file   = "../08_sample_comparinson/Panorama_32542-slide5_A2_5_Channel3_R8_.jpg"
-coords_file = "../08_sample_comparinson/Panorama_32542-slide5_A2_5_results.txt"
-rois = "../08_sample_comparinson/rois/RoiSet_Slide5_A2.zip"
+# Files to read      
+JPEG_file   = "Panorama_PROJECTNUM-SLIDE_NAME_Channel3_R8_.jpg"  # Don't use tiff files, they are too big
+coords_file = "Panorama_PROJECTNUM-SLIDE_NAME_results.txt"
+rois = "rois/RoiSet_SLIDE_NAME.zip"                              
 
 # Genes to plot  (First ones go to bottom)
 genes = ['Adgre1', 'Cd5l', 'Gpnmb',  
- 'Rspo3', 'Stab2',                    
- 'Glul', 'Igfbp2', 'Cyp2f2',            
- 'Tagln', 'Acta2',                    
- 'Sox9']                
+ 'Rspo3', 'Stab2', 'Glul', 
+ 'Igfbp2', 'Cyp2f2', 'Tagln',
+ 'Acta2', 'Sox9']                
 
 # Change this if you'd like all points to be smaller or bigger
 point_size = 20              
@@ -70,7 +69,6 @@ colours = cm.rainbow(np.linspace(0, 1, len(genes)))
 # Prepare Rois for plotting
 cell_rois = roifile.roiread(rois)
 polygons = [roi.coordinates() for roi in cell_rois]
-
 
 ########### NAPARI APP ######################################
 
